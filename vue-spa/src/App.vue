@@ -2,11 +2,30 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link v-if="!isLogged()" to="/login">Login</router-link>
+      <a v-else to="/login" @click="logout()" class="fake-router-link">Logout</a>
     </div>
     <router-view/>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'App',
+
+  methods:{
+    logout() {
+      // eslint-disable-next-line no-console
+      console.log('Logged out');
+      this.$store.dispatch('logout');
+    },
+
+    isLogged() {
+      return this.$store.getters.isLogged;
+    }
+  },
+}
+</script>
 
 <style>
 #app {
@@ -28,5 +47,11 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+
+.fake-router-link {
+  color: -webkit-link;
+  cursor: pointer;
+  text-decoration: underline;
 }
 </style>
