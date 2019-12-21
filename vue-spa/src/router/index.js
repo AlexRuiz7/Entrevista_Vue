@@ -12,10 +12,7 @@ const routes = [
     name: 'home',
     component: Home,
     beforeEnter: (to, from, next) => {
-      if (!store.getters.isLogged)
-        next('/login');
-      else 
-        next();
+      (!store.getters.isLogged) ? next('/login') : next();
     }
   },
   {

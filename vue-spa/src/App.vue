@@ -15,8 +15,6 @@ export default {
 
   methods:{
     logout() {
-      // eslint-disable-next-line no-console
-      console.log('Logged out');
       this.$store.dispatch('logout');
     },
 

@@ -1,6 +1,6 @@
 <template>
-    <div class="flex column gapped-items">
-        <form class="flex column gapped-items">
+    <div class="flex column">
+        <form class="flex column spaced-items">
             <div>
                 <label for="email">User email: </label>
                 <input type="email" id="email" placeholder="Email" v-model="email">
@@ -63,7 +63,7 @@ export default {
         align-self: center;
     }
     
-    .gapped-items > * {
+    .spaced-items > * {
         margin-block-start: 0.67em;
         margin-block-end: 0.67em;
         margin-inline-start: 0px;
