@@ -10,7 +10,7 @@
                 <label for="password">Password: </label>
                 <input type="password" id="password" placeholder="Password" v-model="password">
             </div>
-            <button @click="login" class="btn">Login</button>
+            <button @click.prevent="login" class="btn" type="submit">Login</button>
         </form>
     </div>
     
@@ -59,6 +59,7 @@ export default {
         font: inherit;
         text-transform: uppercase;
         width: 25vw;
+        min-width: 75px;
         height: 5vh;
         align-self: center;
     }

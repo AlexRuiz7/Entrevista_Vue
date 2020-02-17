@@ -1,0 +1,18 @@
+Hola Alejandro,
+
+te voy a explicar un poco qué quiero que hagas como prueba de javascript.
+
+Quiero que montes un SPA con Vue que conste de dos páginas, un Login y un Home (
+    tendrás que usar vue-router para ello).
+
+En la pantalla de Lohin tiene que haber un formulario estándar, donde se introduce usuario 
+(email) y contraseña y un botón de envío.
+Y en la Home puedes poner un título (h1) de "Estoy en la Home".
+
+La idea es de que usando Vuex crees un sistema de login y almacenes el estado "isLogged" en el Store.
+Si entro directamente a la home sin estar logeado me debe redirigir a la pantalla de Login y 
+en el caso de sí estar logeado previamente sí me tiene que dejar entrar.
+
+Espero haberme explicado bien.
+
+Un saludo.
